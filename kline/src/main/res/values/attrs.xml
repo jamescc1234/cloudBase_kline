@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 分时、K线根布局基类属性 !-->
+    <declare-styleable name="ChartBaseFrameLayout">
+        <attr name="strokeColor" format="color|reference" /><!-- 边框颜色 !-->
+        <attr name="lineColor" format="color|reference" /><!-- 经纬线颜色 !-->
+        <attr name="timeTextSize" format="dimension" /><!-- 时间、时间段字体大小 !-->
+        <attr name="timeTextColor" format="color|reference" /><!-- 时间、时间段字体颜色 !-->
+        <attr name="timeLocation" format="enum"><!-- 时间、时间段文字位置 !-->
+            <enum name="center" value="0x0" /><!-- 主图与第一个副图中间 !-->
+            <enum name="bottom" value="0x1" /><!-- 最后一个副图底部 !-->
+            <enum name="none" value="0x2" /><!-- 不绘制时间 !-->
+        </attr>
+        <attr name="crossColor" format="color|reference" /><!-- 十字线颜色 !-->
+        <attr name="dotColor" format="color|reference" /><!-- 十字线中心小圆点颜色 !-->
+        <attr name="isDrawDot" format="boolean" /><!-- 是否绘制十字线中心圆点 !-->
+        <attr name="isDrawMainLine" format="boolean" /><!-- 是否绘制主图十字线横线 !-->
+        <attr name="lineWidthCross" format="dimension|reference" /><!-- 十字光标线宽度 !-->
+        <attr name="isSupportEvent" format="boolean" /><!-- 是否支持手势事件 !-->
+        <attr name="android:typeface"/>
+    </declare-styleable>
+
+    <!-- 分时、K线副图基类属性 !-->
+    <declare-styleable name="ChartBaseView">
+        <attr name="android:textColor" /><!-- 刻度文字颜色 !-->
+        <attr name="android:textSize" /><!-- 刻度文字大小 !-->
+        <attr name="decPlace" format="integer" /><!-- 保留小数位数(默认保留两位小数) !-->
+        <attr name="scaleRule" format="integer"><!-- 刻度规则 !-->
+            <flag name="allRule" value="0" /><!-- 显示全部 !-->
+            <flag name="beginningRule" value="1" /><!-- 显示开始部分 !-->
+            <flag name="middleRule" value="2" /><!-- 显示中间部分 !-->
+            <flag name="endRule" value="4" /><!-- 显示最底部 !-->
+        </attr>
+        <attr name="topRate" format="float" /><!-- 距离顶部百分比，0.02 ~ 0.3 !-->
+        <attr name="bottomRate" format="float" /><!-- 距离顶部百分比，0.02 ~ 0.3 !-->
+        <attr name="isShowText" format="boolean" /><!-- 是否显示刻度(默认true) !-->
+        <attr name="android:typeface"/>
+    </declare-styleable>
+
+    <!-- 分时主图属性 !-->
+    <declare-styleable name="TimeChartMainView">
+        <attr name="textUpColor" format="color|reference" /><!-- 刻度文字涨的颜色 !-->
+        <attr name="textLowColor" format="color|reference" /><!-- 刻度文字跌的颜色 !-->
+        <attr name="textFlatColor" format="color|reference" /><!-- 刻度文字不涨不跌的颜色 !-->
+        <attr name="timeLineColor" format="color|reference" /><!-- 分时线颜色 !-->
+        <attr name="averageLineColor" format="color|reference" /><!-- 均线颜色 !-->
+        <attr name="isDrawShader" format="boolean" /><!-- 是否绘制分时线的渐变效果 !-->
+    </declare-styleable>
+
+    <!-- 分时副图属性 !-->
+    <declare-styleable name="TimeChartDeputyView">
+        <attr name="volUpColor" format="color|reference" /><!-- 成交量涨的颜色 !-->
+        <attr name="volLowColor" format="color|reference" /><!-- 成交量跌的颜色 !-->
+    </declare-styleable>
+
+    <!-- 多日分时父布局属性 !-->
+    <declare-styleable name="LongTimeChartFrameLayout">
+        <attr name="howManyDays" format="enum"><!-- 多少日分时 !-->
+            <enum name="twoDays" value="2" />
+            <enum name="threeDays" value="3" />
+            <enum name="fourDays" value="4" />
+            <enum name="fiveDays" value="5" />
+        </attr>
+    </declare-styleable>
+
+    <!-- 多日分时主图属性 !-->
+    <declare-styleable name="LongTimeChartMainView">
+        <attr name="textUpColor" /><!-- 刻度文字涨的颜色 !-->
+        <attr name="textLowColor" /><!-- 刻度文字跌的颜色 !-->
+        <attr name="textFlatColor" /><!-- 刻度文字不涨不跌的颜色 !-->
+        <attr name="timeLineColor" /><!-- 分时线颜色 !-->
+        <attr name="averageLineColor" /><!-- 均线颜色 !-->
+    </declare-styleable>
+
+    <!-- 多日分时副图属性 !-->
+    <declare-styleable name="LongTimeChartDeputyView">
+        <attr name="volUpColor" /><!-- 成交量涨的颜色 !-->
+        <attr name="volLowColor" /><!-- 成交量跌的颜色 !-->
+    </declare-styleable>
+
+    <!-- K线父布局属性 !-->
+    <declare-styleable name="KLineChartFrameLayout">
+        <attr name="maxKLineWidth" format="dimension" /><!-- 最大单根K线宽度 !-->
+        <attr name="minKLineWidth" format="dimension" /><!-- 最小单根K线宽度 !-->
+        <attr name="initKLineWidth" format="dimension" /><!-- 单根K线初始宽度 !-->
+        <attr name="zoomToLineWidth" format="dimension" /><!-- 将k线变为line模式的宽度 !-->
+        <attr name="dateType" format="enum"><!-- 绘制日期，日期+时间，时间，默认日期 !-->
+            <enum name="drawDate" value="0" />
+            <enum name="drawTime" value="1" />
+            <enum name="drawDateTime" value="2" />
+        </attr>
+        <attr name="maxZoomStall" format="integer" /><!-- 最大支持档位调节，最小只能设置到2档，最大只能设置到10档，默认5档 !-->
+        <attr name="isPortraitTouchEvent" format="boolean" /><!-- 是否支持竖屏滚动、缩放事件，true支持，false仅横屏支持 !-->
+        <attr name="offsetNum" format="integer" /><!-- 初始化偏移量 !-->
+    </declare-styleable>
+
+    <!-- K线主图属性 !-->
+    <declare-styleable name="KLineChartMainView">
+        <attr name="lineWidth" format="reference|dimension" />
+        <attr name="anodeStroke" format="boolean" /><!-- 阳线是否边框还是实心(默认实心) !-->
+        <attr name="cathodeStroke" format="boolean" /><!-- 阴线是否边框还是实心(默认实心) !-->
+        <attr name="anodeColor" format="color|reference" /><!-- 阳线颜色 !-->
+        <attr name="cathodeColor" format="color|reference" /><!-- 阴线颜色 !-->
+        <attr name="flatColor" format="color|reference" /><!-- 不涨不跌的蜡烛线颜色 !-->
+        <attr name="timeColor" format="color|reference" /><!-- 时间颜色 !-->
+        <attr name="shaderColor" format="color|reference" /><!-- 渐变色 !-->
+        <attr name="android:textColor" /><!-- 刻度文字颜色 !-->
+        <attr name="android:textSize" /><!-- 刻度文字大小 !-->
+        <attr name="decPlace" /><!-- 保留小数位数(默认保留两位小数) !-->
+        <attr name="indexMain" format="enum">
+            <enum name="none" value="-1" /><!-- 不绘制指标 !-->
+            <enum name="ma" value="0" /><!-- MA指标 !-->
+            <enum name="boll" value="1" /><!-- BOLL指标 !-->
+            <enum name="time" value="2" /><!-- 分时线 !-->
+            <enum name="returnRate" value="3" /><!-- 收益率 !-->
+            <enum name="sar" value="4" /><!-- SAR指标 !-->
+            <enum name="game" value="5" /><!-- K线游戏有买卖点的MA!-->
+            <enum name="boll_point" value="6" /><!-- K线游戏有买卖点的MA!-->
+            <enum name="ema" value="7"/><!-- EMA !-->
+        </attr>
+        <attr name="scaleRule" /><!-- 刻度规则 !-->
+        <attr name="topRate" /><!-- 距离顶部百分比，0.02 ~ 0.3 !-->
+        <attr name="bottomRate" /><!-- 距离顶部百分比，0.02 ~ 0.3 !-->
+        <attr name="isShowText" /><!-- 是否显示刻度(默认true) !-->
+        <attr name="isShowHighAndLowData" format="boolean" /><!-- 是否显示当前界面最高、最低数据(默认true) !-->
+        <attr name="gameTextSize" format="dimension" /><!-- 游戏指标文字大小 !-->
+        <attr name="gameBuyText" format="string|reference" /><!-- 游戏指标买入文字 !-->
+        <attr name="gameSellText" format="string|reference" /><!-- 游戏指标卖出文字 !-->
+        <attr name="android:typeface"/>
+
+    </declare-styleable>
+
+    <!-- K线副图属性 !-->
+    <declare-styleable name="KLineChartDeputyView">
+        <attr name="indexDeputy" format="enum">
+            <enum name="vol" value="0" /><!-- VOL指标 !-->
+            <enum name="macd" value="1" /><!-- MACD指标 !-->
+            <enum name="kdj" value="2" /><!-- KDJ指标 !-->
+            <enum name="rsi" value="3" /><!-- RSI指标 !-->
+            <enum name="bias" value="4" /><!-- BIAS指标 !-->
+            <enum name="arbr" value="5" /><!-- ARBR指标 !-->
+            <enum name="cci" value="6" /><!-- CCI指标 !-->
+            <enum name="dmi" value="7" /><!-- DMI指标 !-->
+            <enum name="cr" value="8" /><!-- CR指标 !-->
+            <enum name="psy" value="9" /><!-- PSY指标 !-->
+            <enum name="dma" value="10" /><!-- DMA指标 !-->
+            <enum name="trix" value="11" /><!-- TRIX指标 !-->
+            <enum name="vom" value="12" /><!-- 成交额 !-->
+            <enum name="kdj_bs" value="13" /><!-- KDJ买卖 !-->
+            <enum name="rsi_bs" value="14" /><!-- RSI买卖 !-->
+            <enum name="macd_bs" value="15" /><!-- MACD买卖 !-->
+        </attr>
+    </declare-styleable>
+</resources>

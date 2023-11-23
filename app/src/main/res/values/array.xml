@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="lineType">
+        <item>default</item>
+        <item>trend</item>
+        <item>extended</item>
+        <item>ray</item>
+        <item>horizontal_line</item>
+        <item>horizontal_extended</item>
+        <item>vertical_extended</item>
+        <item>price_line</item>
+        <item>parallel_line</item>
+        <item>rect</item>
+        <item>triple_waves</item>
+        <item>penta_waves</item>
+        <item>fibonacci</item>
+    </string-array>
+</resources>

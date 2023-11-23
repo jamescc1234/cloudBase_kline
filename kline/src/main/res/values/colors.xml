@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="home_kline_dot_color">#888</color>
+    <color name="hq_details_kline_background_line_color">#fbfbfb</color>
+    <color name="transparent">#00000000</color>
+    <color name="hq_details_plat_kline_time_text_color">#c1c4cc</color>
+    <color name="hq_details_plat_kline_tab_text_color">#868e9b</color>
+    <color name="hq_details_plat_kline_up_color">#5eba89</color>
+    <color name="hq_details_plat_kline_down_color">#d15140</color>
+    <color name="hq_details_plat_kline_flat_color">#F0B90B</color>
+    <color name="home_quotation_details_kline_shader_up_color">#6624b39f</color>
+    <color name="hq_details_plat_base_text_color">#212833</color>
+    <color name="home_quotation_details_base_text_color">#323232</color>
+    <color name="home_quotation_details_brief_text_color">#666</color>
+    <color name="color_FFFFFF_202630">#FFFFFF</color>
+    <color name="color_202630_EAECEF">#202630</color>
+    <color name="hq_details_plat_kline_floating_name_text_color">#868e9b</color>
+    <color name="hq_details_plat_kline_floating_value_text_color">#222832</color>
+    <color name="Color_Bg">@color/Gray_10</color>
+    <color name="Cus_base_shadow_color">#22000000</color>
+    <color name="Cus_Color_Yellow">#F8F5EC</color>
+</resources>

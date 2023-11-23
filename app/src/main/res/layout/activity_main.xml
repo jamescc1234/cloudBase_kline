@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <include
+        android:id="@+id/layoutDrawLineMessage"
+        layout="@layout/margin_market_layout_kline_draw_line_notification"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1050"
+        android:orientation="horizontal">
+
+        <com.widget.stock.k_line.view.KLineChartFrameLayout
+            android:id="@+id/klineChartFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:crossColor="@color/home_kline_dot_color"
+            app:dateType="drawDateTime"
+            app:initKLineWidth="@dimen/x12"
+            app:isDrawDot="true"
+            app:isPortraitTouchEvent="true"
+            app:lineColor="@color/hq_details_kline_background_line_color"
+            app:maxKLineWidth="@dimen/x50"
+            app:minKLineWidth="@dimen/x2"
+            app:zoomToLineWidth="@dimen/x5"
+            app:strokeColor="@color/transparent"
+            app:timeLocation="bottom"
+            app:timeTextColor="@color/hq_details_plat_kline_time_text_color"
+            app:timeTextSize="@dimen/x29">
+
+            <com.widget.stock.ChartLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.widget.stock.k_line.view.KLineChartMainView
+                    android:id="@+id/klineChartMainView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:textColor="@color/hq_details_plat_kline_tab_text_color"
+                    android:textSize="@dimen/x32"
+                    app:anodeColor="@color/hq_details_plat_kline_up_color"
+                    app:bottomRate="0.12"
+                    app:cathodeColor="@color/hq_details_plat_kline_down_color"
+                    app:flatColor="@color/hq_details_plat_kline_flat_color"
+                    app:indexMain="ma"
+                    app:isShowHighAndLowData="true"
+                    app:scaleRule="middleRule|endRule"
+                    app:shaderColor="@color/home_quotation_details_kline_shader_up_color"
+                    app:timeColor="#3486FF"
+                    app:topRate="0.12">
+
+                    <TextView
+                        android:id="@+id/tvMainIndex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/hq_details_plat_base_text_color"
+                        android:textSize="@dimen/x26" />
+
+                    <TextView
+                        android:id="@+id/tvKLineError"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:lineHeight="@dimen/x65"
+                        android:text="@string/get_time_data_error"
+                        android:textColor="@color/home_quotation_details_base_text_color"
+                        android:textSize="@dimen/x46"
+                        android:visibility="gone"
+                        tool:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/ivSwitchLandscapeNew"
+                        android:layout_width="@dimen/x58"
+                        android:layout_height="@dimen/x58"
+                        android:layout_marginRight="@dimen/x23"
+                        android:src="@drawable/ic_view_expand_f"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="20dp"/>
+
+                    <!--                    <View-->
+<!--                        android:id="@+id/drawing_view"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:background="#33ff0000"-->
+<!--                        />-->
+
+                </com.widget.stock.k_line.view.KLineChartMainView>
+
+                <com.widget.stock.k_line.view.KlineLinearLayout
+                    android:id="@+id/layoutIndex1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x80"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_deputy_index_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:includeFontPadding="false"
+                        android:maxLines="2"
+                        android:textColor="@color/home_quotation_details_brief_text_color"
+                        android:textSize="@dimen/x26"
+                        tool:text="Ma:7778.00" />
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/ivSwitchLandscape"
+                        android:layout_width="@dimen/x58"
+                        android:layout_height="@dimen/x58"
+                        android:layout_marginRight="@dimen/x23"
+                        android:src="@mipmap/kline_landscape_img" />
+                </com.widget.stock.k_line.view.KlineLinearLayout>
+
+                <com.widget.stock.k_line.view.KLineChartDeputyView
+                    android:id="@+id/klineChartDeputyView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/hq_details_plat_kline_tab_text_color"
+                    android:textSize="@dimen/x32"
+                    app:indexDeputy="vol"
+                    app:scaleRule="beginningRule|endRule" />
+
+            </com.widget.stock.ChartLinearLayout>
+
+            <com.magnify.MagnifierAutoLayout
+                android:id="@+id/magnifier"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.widget.stock.k_line.view.KLineChartFrameLayout>
+
+    </LinearLayout>
+
+    <com.widget.stock.k_line.view.KLineTopFloatView
+        android:id="@+id/topFloatView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/x156"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/drawingBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enable_drawing"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        app:layout_constraintTop_toTopOf="@id/drawingBtn"
+        app:layout_constraintBottom_toBottomOf="@+id/drawingBtn"
+        app:layout_constraintStart_toEndOf="@id/drawingBtn"
+        android:layout_marginStart="16dp"
+        android:entries="@array/lineType"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/deleteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="delete"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner"
+        app:layout_constraintStart_toEndOf="@+id/spinner"
+        app:layout_constraintTop_toTopOf="@+id/spinner" />
+
+    <Button
+        android:id="@+id/clearBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="clear"
+        app:layout_constraintStart_toStartOf="@+id/drawingBtn"
+        app:layout_constraintTop_toBottomOf="@+id/drawingBtn" />
+
+    <Button
+        android:id="@+id/lockBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Lock"
+        app:layout_constraintBottom_toBottomOf="@+id/clearBtn"
+        app:layout_constraintStart_toEndOf="@+id/clearBtn"
+        app:layout_constraintTop_toTopOf="@+id/clearBtn" />
+
+    <Button
+        android:id="@+id/continueBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Continuous"
+        app:layout_constraintBottom_toBottomOf="@+id/lockBtn"
+        app:layout_constraintStart_toEndOf="@+id/lockBtn"
+        app:layout_constraintTop_toTopOf="@+id/lockBtn" />
+
+    <Button
+        android:id="@+id/hideBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Hide"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clearBtn" />
+
+    <Button
+        android:id="@+id/colorBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Color"
+        app:layout_constraintBottom_toBottomOf="@+id/hideBtn"
+        app:layout_constraintStart_toEndOf="@+id/hideBtn"
+        app:layout_constraintTop_toTopOf="@+id/hideBtn" />
+
+    <Button
+        android:id="@+id/fillColorBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="fillColor"
+        app:layout_constraintBottom_toBottomOf="@+id/colorBtn"
+        app:layout_constraintStart_toEndOf="@+id/colorBtn"
+        app:layout_constraintTop_toTopOf="@+id/colorBtn" />
+
+    <Button
+        android:id="@+id/widthBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="width"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hideBtn" />
+
+    <Button
+        android:id="@+id/styleBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="lineStyle"
+        app:layout_constraintStart_toEndOf="@+id/widthBtn"
+        app:layout_constraintTop_toTopOf="@+id/widthBtn"
+        app:layout_constraintBottom_toBottomOf="@+id/widthBtn"/>
+
+    <Button
+        android:id="@+id/zoomEnable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/enable_drawing"
+        app:layout_constraintBottom_toBottomOf="@+id/styleBtn"
+        app:layout_constraintStart_toEndOf="@+id/styleBtn"
+        app:layout_constraintTop_toTopOf="@+id/styleBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

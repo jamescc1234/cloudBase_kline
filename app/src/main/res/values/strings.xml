@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">kline_library</string>
+    <string name="enable_drawing">En</string>
+    <string name="disable_drawing">Dis</string>
+    <string name="draw_line">Draw Line</string>
+    <string name="marketdetail_click_n_anchor_points_to_finish_drawing">Click %1$d anchor points to finish drawing</string>
+    <string name="marketdetail_selected">Selected</string>
+</resources>
