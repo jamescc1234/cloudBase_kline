@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="Color_ToastBg">@color/Gray_400</color>
+
+    <color name="Color_TextOnGray">@color/Gray_50</color>
+    <color name="Color_TextOnYellow">@color/Gray_850</color>
+
+    <color name="Color_PrimaryYellow">@color/Yellow_500</color>
+    <color name="Color_Red">@color/Red_500</color>
+    <color name="Color_Green">@color/Green_500</color>
+
+    <color name="Color_TextLink">@color/Yellow_600</color>
+    <!--    <color name="Color_Warning">@color/Yellow_500</color>-->
+    <color name="Color_Error">@color/Red_500</color>
+    <color name="Color_Success">@color/Green_500</color>
+
+    <color name="Color_CardBg">@color/Gray_0</color>
+    <color name="Color_Vessel">@color/Gray_5</color>
+    <color name="Color_Input">@color/Gray_10</color>
+    <color name="Color_Line">@color/Gray_50</color>
+    <color name="Color_Grids">@color/Gray_50</color>
+    <color name="Color_PlaceHolder">@color/Gray_200</color>
+    <color name="Color_TabBg">@color/Gray_50</color>
+    <color name="Color_DisableBtn">@color/Gray_100</color>
+    <color name="Color_TertiaryText">@color/Gray_200</color>
+    <color name="Color_SecondaryBtn">@color/Gray_400</color>
+    <color name="Color_DisableText">@color/Gray_200</color>
+    <color name="Color_SecondaryText">@color/Gray_300</color>
+    <color name="Color_PrimaryText">@color/Gray_850</color>
+    <color name="Color_RedAndGreenBgText">@color/Gray_0</color>
+
+    <color name="Color_SliderTickText">@color/Gray_400</color>
+    <color name="Color_Indicator">@color/Gray_400</color>
+    <color name="Color_IndicatorText">@color/Gray_0</color>
+    <color name="Color_Track">@color/Gray_50</color>
+    <color name="Color_Process">@color/Gray_400</color>
+
+    <color name="Color_BtnBg">@color/Yellow_400</color>
+
+    <color name="color_chart_line">@color/Yellow_500</color>
+
+
+    <!--    Binance base color begin    -->
+
+    <color name="Transparent">#00000000</color>
+
+    <color name="Yellow_50">#FFFDE6</color>
+    <color name="Yellow_100">#FFF7B0</color>
+    <color name="Yellow_200">#FFEF87</color>
+    <color name="Yellow_300">#FFE45E</color>
+    <color name="Yellow_400">#FCD535</color>
+    <color name="Yellow_500">#F0B90B</color>
+    <color name="Yellow_600">#D89F00</color>
+    <color name="Yellow_700">#A37200</color>
+    <color name="Yellow_800">#7D5300</color>
+    <color name="Yellow_900">#573700</color>
+
+    <color name="Red_50">#FFF0F0</color>
+    <color name="Red_100">#FFEBEB</color>
+    <color name="Red_200">#FFC2C4</color>
+    <color name="Red_300">#FF99A0</color>
+    <color name="Red_400">#FF707E</color>
+    <color name="Red_500">#F6465D</color>
+    <color name="Red_600">#CF304A</color>
+    <color name="Red_700">#A81E3A</color>
+    <color name="Red_800">#82112B</color>
+    <color name="Red_900">#5C0B21</color>
+
+    <color name="Green_50">#EDFCF4</color>
+    <color name="Green_100">#D3F0E1</color>
+    <color name="Green_200">#A3E3C4</color>
+    <color name="Green_300">#78D6AC</color>
+    <color name="Green_400">#51C997</color>
+    <color name="Green_500">#2EBD85</color>
+    <color name="Green_600">#1D966C</color>
+    <color name="Green_700">#107052</color>
+    <color name="Green_800">#074A37</color>
+    <color name="Green_900">#03241B</color>
+
+    <color name="Blue_50">#F0F9FF</color>
+    <color name="Blue_100">#D6EEFF</color>
+    <color name="Blue_200">#ADDAFF</color>
+    <color name="Blue_300">#85C4FF</color>
+    <color name="Blue_400">#5CABFF</color>
+    <color name="Blue_500">#328DFD</color>
+    <color name="Blue_600">#206CD6</color>
+    <color name="Blue_700">#124EB0</color>
+    <color name="Blue_800">#07358A</color>
+    <color name="Blue_900">#042263</color>
+
+    <color name="Gray_0">#FFFFFF</color>
+    <color name="Gray_5">#FAFAFA</color>
+    <color name="Gray_10">#F5F5F5</color>
+    <color name="Gray_50">#EAECEF</color>
+    <color name="Gray_100">#D8DCE1</color>
+    <color name="Gray_200">#B7BDC6</color>
+    <color name="Gray_250">#929AA5</color>
+    <color name="Gray_300">#848E9C</color>
+    <color name="Gray_400">#707A8A</color>
+    <color name="Gray_500">#4F5867</color>
+    <color name="Gray_600">#434C5A</color>
+    <color name="Gray_700">#333B47</color>
+    <color name="Gray_800">#29313D</color>
+    <color name="Gray_850">#202630</color>
+    <color name="Gray_900">#181E25</color>
+    <color name="Gray_1000">#000000</color>
+</resources>

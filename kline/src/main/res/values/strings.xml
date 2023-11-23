@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calculating_period">Calculating Period</string>
+    <string name="bandwidth">Bandwidth</string>
+    <string name="short_period">Short Period</string>
+    <string name="long_period">Long Period</string>
+    <string name="ma_period">MA Period</string>
+    <string name="ma1_period">MA Period 1</string>
+    <string name="ma2_period">MA Period 2</string>
+    <string name="get_time_data_error">Time data error</string>
+    <string name="buy">Buy</string>
+    <string name="sell">Sell</string>
+    <string name="date_">Time:</string>
+    <string name="gg">--</string>
+
+    <string name="high_">High:</string>
+    <string name="low_">Low:</string>
+    <string name="open_">Open:</string>
+    <string name="close_">Close:</string>
+    <string name="change_">Chg:</string>
+    <string name="ampl_">Ampl:</string>
+    <string name="vol_">Vol:</string>
+    <string name="txn_">Txn:</string>
+    <string name="time">Time</string>
+    <string name="price">Price</string>
+    <string name="quantity">Quantity</string>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calculating_period">Calculating Period</string>
+    <string name="bandwidth">Bandwidth</string>
+    <string name="short_period">Short Period</string>
+    <string name="long_period">Long Period</string>
+    <string name="ma_period">MA Period</string>
+    <string name="ma1_period">MA Period 1</string>
+    <string name="ma2_period">MA Period 2</string>
+    <string name="get_time_data_error">Time data error</string>
+    <string name="buy">Buy</string>
+    <string name="sell">Sell</string>
+    <string name="date_">Tarih:</string>
+    <string name="gg">--</string>
+
+    <string name="high_">En Yüksek:</string>
+    <string name="low_">En Düşük:</string>
+    <string name="open_">Aç:</string>
+    <string name="close_">Kapanış:</string>
+    <string name="change_">Değişim:</string>
+    <string name="ampl_">Ampl:</string>
+    <string name="vol_">Hac:</string>
+    <string name="txn_">Txn:</string>
+    <string name="time">Zaman</string>
+    <string name="price">Fiyat</string>
+    <string name="quantity">Miktar</string>
+</resources>

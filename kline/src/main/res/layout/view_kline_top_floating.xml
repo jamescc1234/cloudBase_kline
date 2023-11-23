@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="@dimen/x6"
+    android:layout_marginBottom="@dimen/x6"
+    app:cardBackgroundColor="@color/Color_CardBg"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:padding="@dimen/x23"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/x35"
+                    android:text="@string/date_"
+                    android:textColor="@color/hq_details_plat_kline_floating_name_text_color"
+                    android:textSize="@dimen/x29" />
+
+                <TextView
+                    android:id="@+id/floatingTvDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/gg"
+                    android:textColor="@color/hq_details_plat_kline_floating_value_text_color"
+                    android:textSize="@dimen/x29" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/x35"
+                    android:text="@string/open_"
+                    android:textColor="@color/hq_details_plat_kline_floating_name_text_color"
+                    android:textSize="@dimen/x29" />
+
+                <TextView
+                    android:id="@+id/floatingTvOpen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/gg"
+                    android:textColor="@color/hq_details_plat_kline_floating_value_text_color"
+                    android:textSize="@dimen/x29" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/x35"
+                    android:text="@string/high_"
+                    android:textColor="@color/hq_details_plat_kline_floating_name_text_color"
+                    android:textSize="@dimen/x29" />
+
+                <TextView
+                    android:id="@+id/floatingTvHigh"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/gg"
+                    android:textColor="@color/hq_details_plat_kline_floating_value_text_color"
+                    android:textSize="@dimen/x29" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x14"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/x35"
+                    android:text="@string/low_"
+                    android:textColor="@color/hq_details_plat_kline_floating_name_text_color"
+                    android:textSize="@dimen/x29" />
+
+                <TextView
+                    android:id="@+id/floatingTvLow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/gg"
+                    android:textColor="@color/hq_details_plat_kline_floating_value_text_color"
+                    android:textSize="@dimen/x29" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x14"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/x35"
+                    android:text="@string/close_"
+                    android:textColor="@color/hq_details_plat_kline_floating_name_text_color"
+                    android:textSize="@dimen/x29" />
+
+                <TextView
+                    android:id="@+id/floatingTvClose"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/gg"
+                    android:textColor="@color/hq_details_plat_kline_floating_value_text_color"
+                    android:textSize="@dimen/x29" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x14"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/x35"
+                    android:text="@string/change_"
+                    android:textColor="@color/hq_details_plat_kline_floating_name_text_color"
+                    android:textSize="@dimen/x29" />
+
+                <TextView
+                    android:id="@+id/floatingTvChange"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/gg"
+                    android:textColor="@color/hq_details_plat_kline_floating_value_text_color"
+                    android:textSize="@dimen/x29" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x14"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/x35"
+                android:text="@string/vol_"
+                android:textColor="@color/hq_details_plat_kline_floating_name_text_color"
+                android:textSize="@dimen/x29" />
+
+            <TextView
+                android:id="@+id/floatingTvVol"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/gg"
+                android:textColor="@color/hq_details_plat_kline_floating_value_text_color"
+                android:textSize="@dimen/x29" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="@dimen/x14"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/lnlyBuy"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvBuyPrice"
+                    tools:text="买 0.48837"
+                    android:textSize="@dimen/x29"
+                    android:textColor="@color/Color_Green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tvBuyAmount"
+                    tools:text="/@34,340"
+                    android:layout_marginStart="@dimen/x4"
+                    android:textColor="@color/hq_details_plat_kline_floating_value_text_color"
+                    android:textSize="@dimen/x29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:layout_marginStart="@dimen/x23"
+                    android:src="@drawable/ic_arrow_right_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lnlySell"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvSellPrice"
+                    tools:text="卖 0.48837"
+                    android:textSize="@dimen/x29"
+                    android:textColor="@color/Color_Red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tvSellAmount"
+                    tools:text="/@34,340"
+                    android:layout_marginStart="@dimen/x4"
+                    android:textColor="@color/hq_details_plat_kline_floating_value_text_color"
+                    android:textSize="@dimen/x29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:layout_marginStart="@dimen/x23"
+                    android:src="@drawable/ic_arrow_right_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

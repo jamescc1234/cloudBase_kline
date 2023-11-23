@@ -1,0 +1,65 @@
+apply plugin: 'maven-publish'
+
+
+def GroupId = 'com.android.kline'
+def ArtifactId = 'kline'
+def Version = '0.0.74-cloudBase-SNAPSHOT'
+
+def releasesRepoUrl = "https://saas-nexus.toolsfdg.net/repository/maven-public/"
+def snapShotRepoUrl = "https://saas-nexus.toolsfdg.net/repository/maven-snapshots"
+
+
+task generateSourcesJar(type:Jar){
+    from android.sourceSets.main.java.srcDirs
+    classifier "sources"
+}
+
+
+afterEvaluate {
+    publishing {
+        //发布的 arr 包配置
+        publications{
+            //名字可以自己指定，如果有多渠道，整段多复制一个
+            release(MavenPublication){
+
+                groupId = GroupId//公司域名
+                artifactId = ArtifactId//该aar包的名称
+                version = Version//版本号
+
+                // 必须有这个 否则不会上传AAR包
+                afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
+                // 多渠道，可以自行指定aar路径
+                // def projectName = project.getName()
+                // artifact "build/outputs/aar/${projectName}-release.aar"
+                // 上传source，这样使用方可以看到方法注释
+                artifact generateSourcesJar
+                //依赖关系
+                pom.withXml{
+                    def dependenciesNode = asNode().appendNode("dependencies")
+                    configurations.implementation.allDependencies.forEach(){
+                        Dependency dependency ->
+                            if (dependency.version != "unspecified" && dependency.name != "unspecified"){
+                                def dependencyNode = dependenciesNode.appendNode('dependency')
+                                dependencyNode.appendNode('groupId', dependency.group)
+                                dependencyNode.appendNode('artifactId', dependency.name)
+                                dependencyNode.appendNode('version', dependency.version)
+                            }
+                    }
+                }
+            }
+        }
+
+        //仓库地址配置
+        repositories {
+            maven {
+                //允许使用 http
+                allowInsecureProtocol = true
+                url = snapShotRepoUrl
+                credentials {
+                    username = "upload"
+                    password = "upload"
+                }
+            }
+        }
+    }
+}

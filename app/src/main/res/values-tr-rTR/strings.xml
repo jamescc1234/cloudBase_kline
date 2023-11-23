@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">kline_library</string>
+    <string name="enable_drawing">En</string>
+    <string name="disable_drawing">Dis</string>
+    <string name="draw_line">Draw Line</string>
+    <string name="marketdetail_selected">Seçildi</string>
+    <string name="marketdetail_click_n_anchor_points_to_finish_drawing">Çizimi bitirmek için %1$d sabitleme noktasına tıklayın</string>
+</resources>

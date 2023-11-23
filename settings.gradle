@@ -1,0 +1,19 @@
+pluginManagement {
+    repositories {
+        maven { url = uri("https://saas-nexus.toolsfdg.net/repository/maven-public/") }
+        maven {url = uri("https://saas-nexus.toolsfdg.net/repository/maven-snapshots")}
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+//dependencyResolutionManagement {
+//    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+//    repositories {
+//        google()
+//        mavenCentral()
+//    }
+//}
+rootProject.name = "kline_library"
+include ':app'
+include ':kline'
